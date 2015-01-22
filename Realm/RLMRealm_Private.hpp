@@ -31,7 +31,9 @@ extern "C" {
     // expose ivar to to avoid objc messages in accessors
     BOOL _inWriteTransaction;
     mach_port_t _threadID;
+
     NSThread *_thread;
+    BOOL _inMemory;
 }
 @property (nonatomic, readonly) BOOL inWriteTransaction;
 @property (nonatomic, readonly) BOOL dynamic;
